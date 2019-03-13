@@ -28,6 +28,7 @@ function renderNPCs(localPosTbl){
         document.getElementById(localPosTbl[i]).innerHTML = '<img src=img/oppPlayer.jpg><img>'
     }
 }
+// This is supposed to run in a loop later in the main JS function.
 function moveNPCs(){
     let movedTbl = {}
     for (i in livePosTbl){
@@ -37,7 +38,7 @@ function moveNPCs(){
         document.getElementById(updated).innerHTML = '<img src=img/oppPlayer.jpg><img>'
     }
 }
-// This functions handles the buying of 
+// This functions handles the buying of different items.
 function buyItem(reqItem){
     switch(reqItem){
         case 1:
@@ -83,22 +84,25 @@ function saveData(cName){
     document.cookie = localCookie;
 
 }
-$(document).keydown(function(e) {
-    switch(e.which) {
+$(document).keydown(function(key) {
+    switch(key.which) {
         case 37: // left
-        console.log("left")
+        console.log("left");
         break;
 
         case 38: // up
+        console.log("up");
         break;
 
         case 39: // right
+        console.log("right");
         break;
 
         case 40: // down
+        console.log("down");
         break;
 
-        default: return; // exit this handler for other keys
+        default: return;
     }
-    e.preventDefault(); // prevent the default action (scroll / move caret)
+    e.preventDefault();
 });
