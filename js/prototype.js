@@ -3,6 +3,7 @@ var npcAmmount = 11; var started = false; var gameActive = false; var hit = fals
 var gameData = {
     livePos: '0,1', liveNPCTbl: {}
 }
+// Daniel function 1 (genNPCs)
 function genNPCs(){
     let doSplit = gameData.livePos.split(',');
     for (i = 1; i < npcAmmount;){
@@ -27,6 +28,7 @@ function renderNPCs(){
         }
     }
 }
+// Daniel function 2 (handleNPCs)
 function handleNPCs(){
     let aSplit = gameData.livePos.split(',');
     for (i in gameData.liveNPCTbl){
